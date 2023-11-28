@@ -1,7 +1,7 @@
-import { Text } from 'react-native';
+import { Text, Button } from 'react-native';
 import PropTypes from 'prop-types';
 
-export default function Post({username, body}) {
+export default function Post({username, body, time, navigateToDetails}) {
   return (
     <>
       <Text>
@@ -10,6 +10,7 @@ export default function Post({username, body}) {
       <Text>
         body: {body}
       </Text>
+      <Button title="Details" onPress={()=>navigateToDetails(username,body,time)}></Button>
     </>
   );
 }
